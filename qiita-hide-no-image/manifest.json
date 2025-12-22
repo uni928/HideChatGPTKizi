@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Qiita: 本文に画像のない記事を非表示",
+  "version": "1.0.0",
+  "description": "Qiita の記事一覧で、本文に画像が無い記事を自動で非表示にします。",
+  "content_scripts": [
+    {
+      "matches": ["https://qiita.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["https://qiita.com/*"]
+}
