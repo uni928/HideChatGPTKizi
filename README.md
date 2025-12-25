@@ -1,1 +1,3 @@
-# HideChatGPTKizi
+ChatGPT で生成した文章をそのまま投稿している Qiita 記事を非表示にする事を目的としたサイトです。
+
+詳しい導入方法は [この記事](https://qiita.com/uni928/items/12ffb8378000642019c3) を見て導入して下さい。
