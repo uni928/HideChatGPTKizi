@@ -60,8 +60,8 @@
     const doc = new DOMParser().parseFromString(html, "text/html");
     const md = doc.querySelector(BODY_SELECTOR);
 
-    // .it-MdContent が存在しない → 画像なし扱い
-    if (!md) return false;
+    // .it-MdContent が存在しない → 画像あり扱い
+    if (!md) return true;
 
     // 本文内 img のみを見る
     return md.querySelector("img") !== null;
@@ -157,3 +157,4 @@
   observer.observe(document.body, { childList: true, subtree: true });
 
 })();
+
