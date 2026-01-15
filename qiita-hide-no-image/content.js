@@ -60,6 +60,14 @@
     const doc = new DOMParser().parseFromString(html, "text/html");
     const md = doc.querySelector(BODY_SELECTOR);
 
+try {
+if(0 <= document.querySelectorAll(ARTICLE_SELECTOR).querySelector("a[href*='/items/']").href.indexOf("items")) {
+  return true;
+}
+} catch {
+
+}
+
     // .it-MdContent が存在しない → 画像あり扱い
     if (!md) return true;
 
@@ -157,4 +165,3 @@
   observer.observe(document.body, { childList: true, subtree: true });
 
 })();
-
